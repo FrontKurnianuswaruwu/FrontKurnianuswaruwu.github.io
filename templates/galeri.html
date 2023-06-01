@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>galeri</title>
+    <style>
+        h1 {
+            text-align: center;
+        }
+
+        .container {
+            width: 600px;
+            border: 2px solid rgb(0, 0, 0, .5);
+            
+            margin: 0 auto;
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        .card {
+            display: flex;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .title {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background-image: linear-gradient(to bottom, rgba(5, 5, 5, 0), rgba(5, 5, 5, 1));
+            top: 200px;
+            transition: all .5s ease-in;
+        }
+
+        .title p,
+        h3 {
+            text-align: center;
+            color: white;
+            line-height: 2px;
+            position: relative;
+            top: 130px;
+            text-shadow: 1px 1px rgba(5, 5, 5, 5);
+        }
+
+        .card:hover .title {
+            top: 0;
+            transition: all 0.5s ease-out;
+        }
+
+        .card img {
+            transform: scale(1);
+            transition: all .5s ease-out;
+        }
+
+        .card:hover img {
+            transform: scale(1.1);
+            transition: all .3s ease-in;
+        }
+
+        a {
+            line-height: 0;
+        }
+
+        .overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            background-color: rgba(0, 0, 0, 0.8);
+            z-index: 100;
+            text-align: center;
+            padding: 130px 0;
+            width: 0;
+            height: 0;
+            overflow: hidden;
+            transition: all .1s ease-out;
+        }
+
+        .overlay img {
+            width: 30%;
+            margin: auto 0;
+        }
+
+        .overlay:target {
+            bottom: 0;
+            right: 0;
+            width: auto;
+            height: auto;
+            background-color: rgba(0, 0, 0, 0.8);
+            transition: all .1s ease-in;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>galery</h1>
+    <div class="container">
+        <div class="card">
+            <a href="#front">
+                <img style="width: 200px  ;" src="/static/assets/img/wp6409389.webp" alt="">
+                <div class="title">
+                    <h3>FICROR</h3>
+                    <p>Flank</p>
+                </div>
+                <div class="overlay" id="front">
+                    <img src="/static/assets/img/wp6409389.webp" alt="">
+                </div>
+            </a>
+        </div>
+        <div class="card">
+            <a href="#front1">
+                <img style="width: 200px  ;"
+                    src="/static/assets/img/Original-Forum-Avatar-Profile-Photo-ID-165325-Avatar-.jpg" alt="">
+                <div class="title">
+                    <h3>FRONT</h3>
+                    <p>Anchor</p>
+                </div>
+                <div class="overlay" id="front1">
+                    <img src="/static/assets/img/Original-Forum-Avatar-Profile-Photo-ID-165325-Avatar-.jpg" alt="">
+                    
+                </div>
+            </a>
+        </div>
+        <a href="#front2">
+            <div class="card">
+                <img style="width: 200px  ;" src="/static/assets/img/wp7346640.webp" alt="">
+                <div class="title">
+                    <h3>BERKAT</h3>
+                    <p>Flank</p>
+                </div>
+                <div class="overlay" id="front2">
+                    <img src="/static/assets/img/wp7346640.webp" alt="">
+                </div>
+        </a>
+    </div>
+    <div class="card">
+        <a href="#front3">
+            <img style="width: 200px  ;" src="/static/assets/img/f5a31b8b43609b08ec71c269a0086fe8.jpg" alt="">
+            <div class="title">
+                <h3>STEVAN</h3>
+                <p>Anchor</p>
+            </div>
+            <div class="overlay" id="front3">
+                <img src="/static/assets/img/f5a31b8b43609b08ec71c269a0086fe8.jpg" alt="">
+            </div>
+        </a>
+    </div>
+    </div>
+    <script>
+        const elementclose = document.getElementsByClassName('overlay')
+        for (let i = 0; i < elementclose.length; i++) {
+            elementclose[i].addEventListener('click', function () {
+                let url = window.location.href.substr(0, window.location.href.indexOf('#'))
+                window.location = url
+            });
+        }
+    </script>
+</body>
+
+</html>

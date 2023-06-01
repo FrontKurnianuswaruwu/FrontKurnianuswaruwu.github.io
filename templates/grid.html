@@ -1,0 +1,147 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        html{
+            background-color: #f5f7f8;
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            padding: 20px 0;
+        }
+        header{
+            width: 90%;
+            max-width: 1240px;
+            margin: 0 auto;
+
+        }
+        .container{
+            width: 90%;
+            max-width: 1240px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 40px;
+            
+
+        }
+        @media (min-width: 30em) {
+            .container{
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+        @media (min-width: 60em) {
+            .container{
+                grid-template-columns: repeat(3, 1fr);
+            }
+        }
+        .card{
+            background-color: #fff;
+            text-decoration: none;
+            color: #444;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            display: flex;
+            flex-direction: column;
+            min-height: 100%;
+            position: relative;
+            padding: 10px;
+            top: 0;
+            transition: top .3s;
+        }
+        .card:hover{
+            top: -2px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+        }
+        .card .thumb{
+            padding-bottom: 20%;
+            background-size: cover;
+            background-position: center;
+        }
+        .card .article{
+            padding: 20px;
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+        .card h1{
+            font-size: 20px;
+            margin: 0;
+            color: black;
+        }
+        .card span{
+            font-size: 14px;
+            color: #999;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            margin: 2em 0 0 0;
+        }
+        .card p{
+            flex: 1;
+            line-height: 1.4;
+
+        }
+        
+    </style>
+</head>
+<body>
+    <header>
+        <h1>My Team</h1>
+    </header>
+    <div class="container">
+        <div class="artikel-1">
+            <div class="card">
+                <div class="thumb">
+                    <img src="/static/assets/img/front1-removebg-preview (2).png" alt="">
+                </div>
+                <article>
+                    <h1>Sistem kos termurah area ukrim</h1>
+                    <span>DETAIL</span>
+                </article>
+            </div>
+        </div>
+
+        <div class="artikel-2">
+            <div class="card">
+                <div class="thumb">
+                    <img src="/static/assets/img/front1-removebg-preview (2).png" alt="">
+                </div>
+                <article>
+                    <h1>Sistem kos termurah area ukrim</h1>
+                    <span>DETAIL</span>
+                </article>
+            </div>
+        </div>
+
+        <div class="artikel-3">
+            <div class="card">
+                <div class="thumb">
+                    <img src="/static/assets/img/front1-removebg-preview (2).png" alt="">
+                </div>
+                <article>
+                    <h1>Sistem kos termurah area ukrim</h1>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores maxime veritatis totam harum non inventore tempore adipisci tenetur rem, beatae nihil quod unde nesciunt expedita? Molestiae neque inventore nesciunt aliquid.</p>
+                    <span>DETAIL</span>
+                </article>
+            </div>
+        </div>
+
+        <div class="artikel-4">
+            <div class="card">
+                <div class="thumb">
+                    <img src="/static/assets/img/front1-removebg-preview (2).png" alt="">
+                </div>
+                <article>
+                    <h1>Sistem kos termurah area ukrim</h1>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores maxime veritatis totam harum non inventore tempore adipisci tenetur rem, beatae nihil quod unde nesciunt expedita? Molestiae neque inventore nesciunt aliquid.</p>
+                    <span>DETAIL</span>
+                </article>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
